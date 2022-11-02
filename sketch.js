@@ -26,7 +26,7 @@ path.scale=1.2;
 
 //crear sprite de boy (niño)
 boy = createSprite(70,380,20,20);
-boy.addAnimation("Jake1.png", "Jake2.png", "Jake3.png", "Jake4.PNG", "Jake5.png",boyImg);
+boy.addAnimation("JakeRunning",boyImg);
 boy.scale= 1;
 
 //agregar animación para boy
@@ -56,6 +56,8 @@ function draw() {
   
   edges= createEdgeSprites();
   boy.collide(edges[3]);
+  boy.collide(leftBoundary);
+  boy.collide(rightBoundary);
   // colisión de boy con los límites derecho e izquierdo invisibles 
   
   //código para reiniciar el fondo
